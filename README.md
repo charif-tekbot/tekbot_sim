@@ -1,4 +1,33 @@
-# TRC ROS2 Tutorials
+# TRC ROS2 Training
+## How to use this simulator ?
+
+Clone the repository in an existing workspace src directory (do not forget to source the ws):
+
+```bash
+cd ros_workspace/src
+git clone https://github.com/charif-tekbot/tekbot_sim.git
+```
+Compile the contained packages either one by one with `--packages-select` or using colcon build at the root of you workspace:
+
+```bash
+cd ..
+colcon build
+```
+Launch `tekbot` in an empty word:
+
+```bash
+ros2 launch tekbot_description gazebo.launch.py
+```
+
+Visualize the maze environment:
+
+```bash
+ros2 launch maze_solving maze.launch.py
+```
+
+*Exercise 1*: Spawn the robot in the maze environnement at a desired position
+
+*Exercie 2*: Create a package named `tekbot_control` and perfom teleoperation and localization task using the native package `robot_localization` (to install it :```sudo apt install ros-humble-robot-localization```)
 
 ## Tips pour Déboguer avec RQt dans ROS
 
@@ -34,3 +63,4 @@ Pour une configuration de base efficace, nous recommandons les plugins suivants 
 
 
 Au premier lancement, les fenêtres de ces outils se logeront partout sur la fenêtre principale mais vous pouvez les superposés et obtenir un menu horizontal en bas permettant de naviguer entre les outils.
+
