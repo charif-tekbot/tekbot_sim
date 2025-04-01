@@ -29,16 +29,9 @@ def generate_launch_description():
         "description.launch.py"]
   )
 
-  tekbot_teleop_path = PathJoinSubstitution(
-        [FindPackageShare("tekbot_control"),
-        "launch",
-        "tekbot_teleop_joy.launch.py"]
-  )
-
   tekbot_description_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource([tekbot_description_path]))
-  tekbot_teleop_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource([tekbot_teleop_path]))
-  # Pose where we want to spawn the robot
 
+  # Pose we want to spawn the robot
   spawn_x_val = LaunchConfiguration('x_init')
   spawn_y_val = LaunchConfiguration('y_init')
   spawn_z_val = LaunchConfiguration('z_init')
@@ -75,6 +68,5 @@ def generate_launch_description():
   ld.add_action(spawn_entity_cmd)
   ld.add_action(gazebo)
   ld.add_action(tekbot_description_launch)
-  ld.add_action(tekbot_teleop_launch) # + ekf loc
-  
+
   return ld
