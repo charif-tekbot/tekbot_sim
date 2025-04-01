@@ -7,7 +7,7 @@ Clone the repository in an existing workspace src directory (do not forget to so
 cd ros_workspace/src
 git clone https://github.com/charif-tekbot/tekbot_sim.git
 ```
-Compile the contained packages either one by one with `--packages-select` or using colcon build at the root of you workspace:
+Compile the contained packages either one by one with `--packages-select` or using colcon build at the root of your workspace:
 
 ```bash
 cd ..
@@ -27,7 +27,12 @@ ros2 launch maze_solving maze.launch.py
 
 *Exercise 1*: Spawn the robot in the maze environnement at a desired position
 
-*Exercie 2*: Create a package named `tekbot_control` and perfom teleoperation and localization task using the native package `robot_localization` (to install it :```sudo apt install ros-humble-robot-localization```)
+*Exercie 2*: Create a package named `tekbot_control` and perfom teleoperation and localization task using the native packages `teleop_joy` and `robot_localization`.
+To install them :
+```bash
+sudo apt install ros-humble-robot-localization
+sudo apt install ros-humble-teleop-twist-joy
+```
 
 ## Tips pour Déboguer avec RQt dans ROS
 
