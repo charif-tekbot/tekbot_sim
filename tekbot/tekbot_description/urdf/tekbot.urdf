@@ -46,14 +46,12 @@
   <!-- ****************** ROBOT BASE FOOTPRINT ***************************  -->
   <!-- Define the center of the main robot chassis projected on the ground -->	
 
-  <link name="base_footprint">
-  	<!-- <xacro:box_inertia m="0" w="0" d="0" h="0"/> -->
-  </link>
+  <link name="base_footprint" />
 
   <joint name="base_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="base_footprint"/>
-    <origin xyz="0.0 0.0 ${-(wheel_radius+wheel_zoff)}" rpy="0 0 0"/>
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0.0 0.0 0.10" rpy="0 0 0"/>
   </joint>
 
   <!-- ****************** WHEELS ***************************  -->
@@ -118,9 +116,9 @@
       <command_topic>cmd_vel</command_topic>
       <odometry_topic>odom</odometry_topic>
       <odometry_frame>odom</odometry_frame>
-      <robot_base_frame>base_link</robot_base_frame>
+      <robot_base_frame>base_footprint</robot_base_frame>
       <publish_wheel_tf>false</publish_wheel_tf>
-      <publish_odom_tf>false</publish_odom_tf>
+      <publish_odom_tf>true</publish_odom_tf>
       <publish_odom>true</publish_odom>
       <odometry_source>1</odometry_source>
     </plugin>
@@ -129,21 +127,19 @@
   <gazebo reference="lidar_link">
     <sensor name="lidar" type="ray">
       <always_on>true</always_on>
-      <visualize>true</visualize>
-      <update_rate>5</update_rate>
+      <visualize>false</visualize>
+      <update_rate>10</update_rate>
       <ray>
         <scan>
           <horizontal>
-            <samples>120</samples> 
-            <resolution>1.0</resolution>
-            <min_angle>-1.57</min_angle>
-            <max_angle>1.57</max_angle>
+            <samples>360</samples> 
+            <min_angle>-3.14</min_angle>
+            <max_angle>3.14</max_angle>
           </horizontal>
         </scan>
         <range>
           <min>0.01</min>
           <max>10.0</max>
-          <resolution>0.015</resolution>
         </range>
         <noise>
           <type>gaussian</type>
