@@ -54,13 +54,6 @@ def generate_launch_description():
                     output='screen',
     parameters=[{'use_sim_time': True}])
   
-  rqt = Node(
-            package='rqt_gui',
-            executable='rqt',
-            name='rqt',
-            output='screen'
-        )
-  
   # Create the launch description and populate
   ld = LaunchDescription(ARGUMENTS)
 
