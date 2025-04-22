@@ -55,6 +55,13 @@ def generate_launch_description():
         "description.launch.py"]
     )
     tekbot_description_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource([tekbot_description_path]))
+    
+    tekbot_teleop_path = PathJoinSubstitution(
+        [FindPackageShare("tekbot_control"),
+        "launch",
+        "tekbot_teleop_joy.launch.py"]
+    )
+    tekbot_teleop_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource([tekbot_teleop_path]))
 
     # Pose we want to spawn the robot
     spawn_x_val = LaunchConfiguration('x_init')
@@ -89,6 +96,7 @@ def generate_launch_description():
     ld.add_action(gz_model)
     ld.add_action(gazebo_sim)
     ld.add_action(tekbot_description_launch)
+    ld.add_action(tekbot_teleop_launch)
     ld.add_action(spawn_entity_cmd)
     ld.add_action(rqt)
 
