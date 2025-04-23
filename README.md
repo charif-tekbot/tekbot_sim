@@ -6,7 +6,7 @@ Clone the repository :
 ```bash
 git clone https://github.com/charif-tekbot/tekbot_sim.git
 ```
-Compile the contained packages using the configure script:
+Compile the contained packages using the configure script.
 This will create and build a workspace `tekbot_ws` and move to it root (it also manages sourcing).
 
 ```bash
