@@ -1,18 +1,21 @@
 # TRC ROS2 Training
 ## How to use this simulator ?
 
-Clone the repository in an existing workspace src directory (do not forget to source the ws):
+Clone the repository :
 
 ```bash
-cd ros_workspace/src
 git clone https://github.com/charif-tekbot/tekbot_sim.git
 ```
-Compile the contained packages either one by one with `--packages-select` or using colcon build at the root of your workspace:
+Compile the contained packages using the configure script:
 
 ```bash
-cd ..
-colcon build
+cd tekbot_sim
+chmod +x configure.sh (needed if you want to execute the script ./configure.sh)
+source configure.sh
 ```
+
+This will create and build a workspace `tekbot_ws` and move to it root (it also manages sourcing).
+
 Launch `tekbot` in an empty word:
 
 ```bash
