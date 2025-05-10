@@ -42,7 +42,7 @@ sudo apt install ros-humble-robot-localization
 sudo apt install ros-humble-teleop-twist-joy
 ```
 
-*Exercie 3*: Escape from the maze environment using slam_toolbox and nav2 packages.
+*Exercie 3*: Escape from the maze environment using `slam_toolbox` and `nav2` packages.
 
 
 ## Tips pour Déboguer avec RQt dans ROS
