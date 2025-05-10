@@ -24,7 +24,7 @@ ament_package()
 
 install(
   DIRECTORY
-    launch worlds models
+    launch worlds models map config
   DESTINATION
     share/${PROJECT_NAME}
 )

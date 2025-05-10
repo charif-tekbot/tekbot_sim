@@ -27,15 +27,23 @@ Visualize the maze environment:
 ```bash
 ros2 launch maze_solving maze.launch.py
 ```
+Launch the Robot in the maze environment:
 
-*Exercise 1*: Spawn the robot in the maze environnement at a desired position
+```bash
+ros2 launch maze_solving tekbot_maze.launch.py
+```
 
-*Exercie 2*: Create a package named `tekbot_control` and perfom teleoperation and localization task using the native packages `teleop_joy` and `robot_localization`.
+*Exercise 1*(already done): Spawn the robot in the maze environnement at a desired position
+
+*Exercie 2* (already done): Create a package named `tekbot_control` and perfom teleoperation and localization task using the native packages `teleop_joy` and `robot_localization`.
 To install them :
 ```bash
 sudo apt install ros-humble-robot-localization
 sudo apt install ros-humble-teleop-twist-joy
 ```
+
+*Exercie 3*: Escape from the maze environment using slam_toolbox and nav2 packages.
+
 
 ## Tips pour Déboguer avec RQt dans ROS
 
