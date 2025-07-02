@@ -1,0 +1,117 @@
+<?xml version='1.0'?>
+<sdf version='1.7'>
+  <model name='maze_with_qr'>
+    <model name='qr_code_1'>
+      <static>1</static>
+      <link name='qr_code_1_link'>
+        <pose>0 0 0.001 0 -0 1.5708</pose>
+        <visual name='visual_qr_code_1'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://qr_code_1/materials/scripts</uri>
+              <uri>model://qr_code_1/materials/textures</uri>
+              <name>qr_code_1/qr_code_1</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+      <pose>0.437044 -2.90144 0.011834 3.14159 1.56722 3.14159</pose>
+    </model>
+    <model name='qr_code_1_0'>
+      <static>1</static>
+      <link name='qr_code_1_link'>
+        <pose>0 0 0.001 0 -0 1.5708</pose>
+        <visual name='visual_qr_code_1'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://qr_code_1/materials/scripts</uri>
+              <uri>model://qr_code_1/materials/textures</uri>
+              <name>qr_code_1/qr_code_1</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+      <pose>-0.583664 1.24796 0.01516 3.14159 -1.56762 3.14159</pose>
+    </model>
+    <model name='qr_code_2'>
+      <static>1</static>
+      <link name='qr_code_2_link'>
+        <pose>0 0 0.001 0 -0 1.5708</pose>
+        <visual name='visual_qr_code_2'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://qr_code_2/materials/scripts</uri>
+              <uri>model://qr_code_2/materials/textures</uri>
+              <name>qr_code_2/qr_code_2</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+      <pose>2.41537 2.28481 -0.017491 3.14159 -1.56853 3.14159</pose>
+    </model>
+    <model name='qr_code_2_0'>
+      <static>1</static>
+      <link name='qr_code_2_link'>
+        <pose>0 0 0.001 0 -0 1.5708</pose>
+        <visual name='visual_qr_code_2'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://qr_code_2/materials/scripts</uri>
+              <uri>model://qr_code_2/materials/textures</uri>
+              <name>qr_code_2/qr_code_2</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+      <pose>-2.23014 2.67091 -0.015303 1.57315 -0 0</pose>
+    </model>
+    <model name='qr_code_2_1'>
+      <static>1</static>
+      <link name='qr_code_2_link'>
+        <pose>0 0 0.001 0 -0 1.5708</pose>
+        <visual name='visual_qr_code_2'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://qr_code_2/materials/scripts</uri>
+              <uri>model://qr_code_2/materials/textures</uri>
+              <name>qr_code_2/qr_code_2</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+      <pose>-0.038613 -3.30224 0.0058 -1.57024 0 0</pose>
+    </model>
+    <static>0</static>
+    <allow_auto_disable>1</allow_auto_disable>
+  </model>
+</sdf>

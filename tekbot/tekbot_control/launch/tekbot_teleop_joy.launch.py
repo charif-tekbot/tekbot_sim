@@ -9,7 +9,7 @@ def generate_launch_description():
 
     
     filepath_config_joy = PathJoinSubstitution(
-        [FindPackageShare('tekbot_control'), 'config', ('teleop_mactech.yaml')]
+        [FindPackageShare('tekbot_control'), 'config', ('xbox360.yaml')]
     )
     
     

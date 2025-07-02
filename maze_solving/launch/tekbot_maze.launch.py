@@ -23,32 +23,13 @@ ARGUMENTS = [
 
 def generate_launch_description():
 
-    model_path = PathJoinSubstitution(
-        [FindPackageShare("maze_solving"), "models"]
-    )
-
-    gz_model = SetEnvironmentVariable(
-            name='GAZEBO_MODEL_PATH',
-            value=model_path
-    )
-
-    world_file = PathJoinSubstitution(
-        [FindPackageShare("maze_solving"),
-        "worlds",
-        "maze_4_metal_6x6.world"],
-    )
-
-    gazebo_launch = PathJoinSubstitution(
+    maze_path = PathJoinSubstitution(
         [FindPackageShare("maze_solving"),
         "launch",
-        "empty_world.launch.py"],
+        "maze.launch.py"],
     )
+    maze_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource([maze_path]))
 
-    gazebo_sim = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([gazebo_launch]),
-        launch_arguments={'world_path': world_file}.items(),
-    )
-    
     tekbot_description_path = PathJoinSubstitution(
         [FindPackageShare("tekbot_description"),
         "launch",
@@ -93,8 +74,7 @@ def generate_launch_description():
     ld = LaunchDescription(ARGUMENTS)
 
     # Add any actions
-    ld.add_action(gz_model)
-    ld.add_action(gazebo_sim)
+    ld.add_action(maze_launch)
     ld.add_action(tekbot_description_launch)
     ld.add_action(tekbot_teleop_launch)
     ld.add_action(spawn_entity_cmd)
